@@ -1,4 +1,4 @@
-import express from 'express'
+import express, { NextFunction, Request } from 'express'
 import dotenv from 'dotenv'
 import { PrismaClient } from '@prisma/client';
 import { Identify } from './controllers/product.controller';
@@ -19,7 +19,10 @@ app.listen(PORT,()=>{
 })
 
 // Gets the request and forward it to the Identify function of controller
-app.get('/identify',Identify)
+app.post('/identify',Identify)
+
+
+
 
 
 
