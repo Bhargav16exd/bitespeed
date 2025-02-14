@@ -2,6 +2,8 @@
 
 The project uses **Prisma, Express, and TypeScript** to build a backend API and deploy it on **Render**.
 
+## Endpoint : https://bitespeed-z6or.onrender.com/identify
+
 ---
 
 ##  **Getting Started**
