@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --exec ts-node src/app.ts",
-    "build":"tsc",
+    "build":"tsc && npx prisma generate --schema=./src/prisma/schema.prisma",
     "start": "node dist/app.js",
     "migrate":"prisma migrate deploy --schema=./src/prisma/schema.prisma"
   },
