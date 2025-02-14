@@ -75,7 +75,7 @@ export const Identify = async (req:any,res:any,next:any) =>{
         })
 
 
-        //Returns if same data is found
+        //Return user if same email and phone number is found
         if(user[0]?.email == email && user[0]?.phoneNumber == phoneNumber){
             return res.status(200).json(
                 {
@@ -112,8 +112,10 @@ export const Identify = async (req:any,res:any,next:any) =>{
             )
         }
 
+
         //Check if first element in array is secondary contact if yes trace trace back to primary contact        
         if(user[0].linkPrecedence === "secondary" && user[0].linkedId){
+            
             const {
                 primaryId,
                 emails,
